@@ -1,0 +1,2 @@
+mv inotify-2.0.0/* .
+rm -rf inotifiy-2.0.0
