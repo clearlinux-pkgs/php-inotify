@@ -4,7 +4,7 @@
 #
 Name     : php-inotify
 Version  : 2.0.0
-Release  : 2
+Release  : 3
 URL      : https://pecl.php.net//get/inotify-2.0.0.tgz
 Source0  : https://pecl.php.net//get/inotify-2.0.0.tgz
 Summary  : No detailed summary available
