@@ -4,7 +4,7 @@
 #
 Name     : php-inotify
 Version  : 3.0.0
-Release  : 7
+Release  : 8
 URL      : https://pecl.php.net/get/inotify-3.0.0.tgz
 Source0  : https://pecl.php.net/get/inotify-3.0.0.tgz
 Summary  : No detailed summary available
@@ -47,4 +47,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20200930/inotify.so
+/usr/lib64/extensions/no-debug-non-zts-20210902/inotify.so
