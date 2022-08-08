@@ -4,7 +4,7 @@
 #
 Name     : php-inotify
 Version  : 3.0.0
-Release  : 10
+Release  : 11
 URL      : https://pecl.php.net/get/inotify-3.0.0.tgz
 Source0  : https://pecl.php.net/get/inotify-3.0.0.tgz
 Summary  : No detailed summary available
