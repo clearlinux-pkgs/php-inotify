@@ -4,13 +4,14 @@
 #
 Name     : php-inotify
 Version  : 3.0.0
-Release  : 23
+Release  : 24
 URL      : https://pecl.php.net/get/inotify-3.0.0.tgz
 Source0  : https://pecl.php.net/get/inotify-3.0.0.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : PHP-3.01
 Requires: php-inotify-lib = %{version}-%{release}
+Requires: php-inotify-license = %{version}-%{release}
 BuildRequires : buildreq-php
 
 %description
@@ -21,9 +22,18 @@ This extension exposes the inotify API and some additional functions.
 %package lib
 Summary: lib components for the php-inotify package.
 Group: Libraries
+Requires: php-inotify-license = %{version}-%{release}
 
 %description lib
 lib components for the php-inotify package.
+
+
+%package license
+Summary: license components for the php-inotify package.
+Group: Default
+
+%description license
+license components for the php-inotify package.
 
 
 %prep
@@ -39,6 +49,8 @@ phpize
 make  %{?_smp_mflags}
 
 %install
+mkdir -p %{buildroot}/usr/share/package-licenses/php-inotify
+cp %{_builddir}/inotify-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/php-inotify/216829693731f720e978b2edac4b652864d2a3bf
 %make_install
 
 
@@ -47,4 +59,8 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20210902/inotify.so
+/usr/lib64/extensions/no-debug-non-zts-20220829/inotify.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/php-inotify/216829693731f720e978b2edac4b652864d2a3bf
